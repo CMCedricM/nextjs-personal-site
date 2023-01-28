@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     
     <div className="min-w-full flex flex-col items-center justify-center gap-4">
       <div>
-        <Image src='https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/22-08-07%2003-36-32%200136.jpg' alt='../images/image-holder.png' blurDataURL="../images/image-holder.png" placeholder="blur" width={300} height={300} className='rounded-md'></Image>
+        <Image src='https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/22-08-07%2003-36-32%200136.jpg' alt='../images/image-holder.png' blurDataURL="../images/image-holder.png" placeholder="blur" width={300} height={300} className='rounded-md'></Image>
       </div>
       <div className="flex flex-col items-center bg-gradient-to-r from-[#4B79A1] to-[#283E51] drop-shadow-md rounded-md  min-w-full p-5">
         <article className="text-white p-4 text-xl">
