@@ -20,7 +20,7 @@ const Photography : NextPage = () => {
         }
     
     return(
-        <div className="min-w-full flex flex-colitems-center"> 
+        <div className="grow min-w-full min-h-full flex flex-col items-center"> 
            
            <div className="min-w-full flex flex-col gap-5 p-5">
             <div className="min-w-full min-h-min flex flex-col md:flex-row gap-5 items-center justify-center rounded-md">
@@ -39,6 +39,8 @@ const Photography : NextPage = () => {
                     <Image src={imgURL['Rock-Castle-Photo'] ||image_holder} alt='' width={300} height={225} className='rounded-md hover:border-2 hover:border-orange-400'></Image>
                     <Image src={imgURL['Sunset-Walk-Photo'] || image_holder} alt='' width={300} height={225} className='rounded-md hover:border-2 hover:border-orange-400'></Image>
             </div>
+
+
            </div>
 
 

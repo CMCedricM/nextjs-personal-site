@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const FooterNote = () => {
     return(
-        <div className="text-white p-5 gap-5 min-w-full flex flex-row md:flex-col items-center rounded-md bg-[#020c14] ">
+        <div className=" grow text-white p-5 gap-5 min-w-full flex flex-row md:flex-col items-center rounded-md bg-[#020c14] ">
            
             
             <div className="flex flex-col gap-4 items-center min-w-full p-4">
