@@ -13,11 +13,11 @@ const Navigation = () => {
 
     return(
         <div className="flex flex-col items-center text-white text-lg">
-            <ul className="flex flex-row items-center gap-3">
+            <ul className="flex flex-row items-center gap-4">
                 |{
                     Object.keys(pages).map((data, index) => {
                         return(
-                                <ul key={index} className='flex flex-row items-center gap-2'>
+                                <ul key={index} className='flex flex-row items-center gap-4'>
                                     <li>
                                         <Link href={pages[data] || '' } className='hover:text-orange-400'>{data}</Link>
                                     </li>|
