@@ -20,7 +20,7 @@ const FooterNote = () => {
                 <li className="basis-1/3">
                     <ul>Github
                         <li className="p-3">
-                            <Link href='https://github.com/CMCedricM'  className="hover:text-orange-400">@CMCedricm</Link>
+                            <Link href='https://github.com/CMCedricM'  className="hover:text-orange-400">@CMCedricM</Link>
                         </li>
                     </ul>
                 </li>
