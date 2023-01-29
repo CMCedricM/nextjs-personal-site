@@ -12,7 +12,7 @@ const Navigation = () => {
     }
 
     return(
-        <div className="flex flex-col items-center text-white text-lg">
+        <div className="flex flex-col items-center text-white text-lg p-3">
             <ul className="flex flex-row items-center gap-4">
                 |{
                     Object.keys(pages).map((data, index) => {
