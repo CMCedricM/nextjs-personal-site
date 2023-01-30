@@ -6,7 +6,8 @@ const Navigation = () => {
     const pages : Record <string,string> = {
         'Home' : '/', 
         'Photography' : '/photography', 
-        'Projects' : '/projects', 
+        'Projects' : '/projects',
+        'Resume' : 'https://drive.google.com/file/d/1n2F9qLDL1MELNk3SAnHzbkKXICQXglcA/view?usp=sharing'
 
     }
 
