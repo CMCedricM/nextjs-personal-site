@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <Head>
        <title>{`Cedric's Homepage`}</title>
         <meta name="description" content="A websites about Cedric Men" />
-        <link rel="icon" href="/favicon.ico" />
+       
     </Head>
     
     <div className="min-w-full flex flex-col items-center justify-center gap-4">

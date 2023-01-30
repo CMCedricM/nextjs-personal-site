@@ -1,4 +1,4 @@
-import { ReactNode, FC } from "react";
+import {type ReactNode, type FC } from "react";
 
 type InfoCardProps = {
     children?: ReactNode, 
@@ -7,10 +7,9 @@ type InfoCardProps = {
 }
 
 
-const InfoCard : FC<InfoCardProps> = ({children, title, description} ) => {
+const InfoCard : FC<InfoCardProps> = ({children} ) => {
     return(
-        <div className="flex flex-col items-center bg-white drop-shadow-md rounded-md w-full h-full p-5">
-             <h1>{title}</h1>
+        <div className="flex flex-col items-center bg-[#f3eae0] drop-shadow-md rounded-md w-full h-full p-5 hover:border-2 hover:border-orange-400">
              {children}
         </div>
     )

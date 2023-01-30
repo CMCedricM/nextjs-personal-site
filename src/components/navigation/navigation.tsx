@@ -7,7 +7,6 @@ const Navigation = () => {
         'Home' : '/', 
         'Photography' : '/photography', 
         'Projects' : '/projects', 
-        'Projects-Beta' : '', 
 
     }
 
