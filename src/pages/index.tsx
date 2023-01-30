@@ -4,13 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import image_holder from "../images/image-holder.png"
 
+
 const Home: NextPage = () => {
   return (
     <div className=" grow  min-w-full flex flex-col items-center ">
     <Head>
        <title>{`Cedric's Homepage`}</title>
         <meta name="description" content="A websites about Cedric Men" />
-        <link rel="icon" href="/favicon.ico" />
+       
     </Head>
     
     <div className="min-w-full flex flex-col items-center justify-center gap-4">
