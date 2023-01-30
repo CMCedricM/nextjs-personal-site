@@ -1,7 +1,10 @@
 import { type NextPage } from "next";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import InfoCard from "../components/formats/InfoCards";
+
 
 
 const ProjectsPage : NextPage = () => {
@@ -13,8 +16,9 @@ const ProjectsPage : NextPage = () => {
     
     const fetchRepos = () => {
         fetch(githubRepoUrl).then((response) => response.json()).then((data) => {data?.message ? setError(data?.message) : setGitHubRepos(data)})
+        
     }
-
+    console.log(gitHubRepos)
     useEffect(() => fetchRepos(), []); 
 
     return(
@@ -28,7 +32,9 @@ const ProjectsPage : NextPage = () => {
                             <div className="grow flex flex-col items-center p-5  text-black">
                                 <h1 className="text-lg font-bold">{data?.name}</h1>
                                 <p className="grow p-3">{data?.description}</p>
-                                <p className="grow p-3">{`Last Updated: ${data?.updated_at}`}</p>
+                                <Link href={data?.html_url} className='hover:border-2 hover:border-purple-200 rounded-md'>
+                                    <Image src={`/github-ico.svg`} alt='' width={40} height={40}></Image>
+                                </Link>
                             </div>
                     </InfoCard> : '')
                 })}
