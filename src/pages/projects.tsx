@@ -36,7 +36,7 @@ const ProjectsPage : NextPage = () => {
         
         { !gitHubRepos || gitHubRepos?.length <= 0 || errorMs ?
             <div className="flex flex-col justify-center items-center p-5">
-                {!errorMs  ? <h1 className= "grow text-2xl text-white text-center items-center">Loading...</h1> : <h1 className= "grow text-2xl text-white text-center items-center">{`Error Fetching Repos ${errorMs ? `:${errorMs}` : ''}`}</h1>}
+                {!errorMs  ? <h1 className= "grow text-2xl text-white text-center items-center">Loading...</h1> : <h1 className= "grow text-2xl text-white text-center items-center">{`Error Fetching Repos ${errorMs ? `: ${errorMs}` : ''}`}</h1>}
             </div> : ''}
             
                
