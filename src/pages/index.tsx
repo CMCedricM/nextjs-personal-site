@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import image_holder from "../images/image-holder.png"
 
+
 const Home: NextPage = () => {
   return (
     <div className=" grow  min-w-full flex flex-col items-center ">
