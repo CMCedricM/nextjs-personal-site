@@ -7,7 +7,7 @@ const Navigation = () => {
         'Home' : '/', 
         'Photography' : '/photography', 
         'Projects' : '/projects',
-        'Resume' : 'https://drive.google.com/file/d/1s0z9QTTvbHIl9Cf9eu7lCRVIu-ssZiPS/view?usp=share_link'
+        'Resume' : 'https://drive.google.com/file/d/1OupL7Q8SEWKz_ZiMvbTG15rto4LwEkxM/view?usp=share_link'
 
     }
 
