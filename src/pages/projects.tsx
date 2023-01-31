@@ -32,7 +32,7 @@ const ProjectsPage : NextPage = () => {
                             <div className="grow flex flex-col items-center p-5  text-black">
                                 <h1 className="text-lg font-bold">{data?.name}</h1>
                                 <p className="grow p-3">{data?.description}</p>
-                                <Link href={data?.html_url} className='hover:border-2 hover:border-purple-200 rounded-md'>
+                                <Link href={data?.html_url}>
                                     <Image src={`/github-ico.svg`} alt='' width={40} height={40}></Image>
                                 </Link>
                             </div>
