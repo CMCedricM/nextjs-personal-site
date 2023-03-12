@@ -24,8 +24,8 @@ const Home: NextPage = () => {
           <text>{`I'm a graduate from UNLV with a BS in Computer Science and previously a Developer
             in the Smart Home Technology Development Project for`} 
             <Link href='https://www.nihan.care/nihan-team/' className='text-blue-300'> NIHAN.</Link></text>
-          <text>{` Currently I am a Software Developer intern at DecentreLabs, the company behind the real estate site `} 
-          <Link href="https://www.decentrepx.com" className="text-orange-300">DecentrePX.</Link>{` My web tech stack includes HTML, CSS, Node.js, Next.js, React.js, and Typescript. 
+          <text>Currently {"I'm"} a Software Developer at {<Link href="https://www.decentrelabs.com/" className="text-orange-300">DecentreLabs</Link>}, the company behind the real estate site 
+          <Link href="https://www.decentrepx.com" className="text-orange-300"> DecentrePX.</Link>{` My web tech stack includes HTML, CSS, Node.js, Next.js, React.js, and Typescript. 
           Alongside these I also have a great understanding
           of C++, Python, and noSQL.`}</text>
         </article>
