@@ -6,7 +6,7 @@ const Navigation = () => {
     Photography: "/photography",
     Projects: "/projects",
     Resume:
-      "https://drive.google.com/file/d/1vEoks0-8vLwm-XpZN-miRFSLZIw3nHG4/view?usp=sharing",
+      "https://docs.google.com/document/d/1M3RgDE2tJpIwMGHA4T71k8XwyzPpBvNbVvZhZV8Nues/edit?usp=sharing",
   };
 
   return (
