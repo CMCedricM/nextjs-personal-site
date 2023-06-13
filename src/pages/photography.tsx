@@ -36,7 +36,7 @@ const Photography: NextPage = () => {
 
   return (
     <div className="flex min-h-full min-w-full grow flex-col items-center justify-center">
-      <div className="grid grow grid-rows-1 items-center justify-center gap-5 p-5 md:grid-cols-4">
+      <div className=" relative grid grow grid-rows-1 items-center justify-center gap-5 p-5 md:grid-cols-4">
         {Object.keys(imgURL)?.map((data: string, index) => {
           return (
             <div key={index} className="flex grow flex-col">
@@ -47,7 +47,7 @@ const Photography: NextPage = () => {
                 height={225}
                 placeholder="blur"
                 blurDataURL="/images/image-holder.png"
-                className="rounded-md hover:border-2 hover:border-orange-400"
+                className="rounded-md transition duration-150  ease-in-out hover:-translate-y-1 hover:scale-110 hover:border-2 hover:border-orange-400"
               ></Image>
             </div>
           );
