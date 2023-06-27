@@ -3,10 +3,16 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import image_holder from "../images/image-holder.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Home: NextPage = () => {
   return (
-    <div className=" flex  min-w-full grow flex-col items-center ">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className=" flex  min-w-full grow flex-col items-center "
+    >
       <Head>
         <title>{`Cedric's Homepage`}</title>
         <meta name="description" content="A websites about Cedric Men" />
@@ -61,7 +67,7 @@ const Home: NextPage = () => {
           </article>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
