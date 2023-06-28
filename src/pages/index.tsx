@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex min-w-full flex-col items-center rounded-md bg-gradient-to-r from-[#4B79A1] to-[#283E51]  p-5 drop-shadow-md">
           <article className="p-white p-xl p-4">
-            <h1 className="p-3xl pb-2">Hello! My Name is Cedric Men</h1>
+            <h1 className="p-3xl pb-2">{"Hello! My Name is Cedric Men,"}</h1>
             <p>
               {`I'm a graduate from UNLV with a BS in Computer Science and previously a Developer
             in the Smart Home Technology Development Project for`}
