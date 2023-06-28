@@ -1,6 +1,8 @@
 import { type NextPage } from "next";
 import { motion, AnimatePresence } from "framer-motion";
 import { variants, images } from "../styles/animations";
+import Image from "next/image";
+import image_alt from "../images/image-holder.png";
 
 type imageType = Record<string, string>;
 
@@ -30,8 +32,6 @@ const Photography: NextPage = () => {
       "https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/IMG_2392.JPG",
     "Splitting-Lake":
       "https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/IMG_1507.JPG",
-    "Trophy-Garden":
-      "https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/IMG_3493_Original.jpg",
   };
 
   return (
@@ -47,16 +47,17 @@ const Photography: NextPage = () => {
             {Object.keys(imgURL)?.map((data: string, index) => {
               return (
                 <motion.li
+                  variants={images}
                   key={index}
                   className="flex grow flex-col"
-                  variants={images}
                 >
-                  <motion.img
-                    src={imgURL[data]}
+                  <Image
+                    src={imgURL[data] ?? image_alt}
+                    alt=""
                     width={300}
                     height={225}
                     className="rounded-md transition duration-150  ease-in-out hover:-translate-y-1 hover:scale-110 hover:border-2 hover:border-orange-400"
-                  ></motion.img>
+                  ></Image>
                 </motion.li>
               );
             })}
