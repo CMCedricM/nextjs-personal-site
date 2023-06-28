@@ -1,14 +1,8 @@
 import { type NextPage } from "next";
-import {
-  motion,
-  AnimatePresence,
-  domAnimation,
-  useAnimation,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { variants, images } from "../styles/animations";
 import Image from "next/image";
 import image_alt from "../images/image-holder.png";
-import { useEffect, useState } from "react";
 
 type imageType = Record<string, string>;
 
@@ -39,23 +33,6 @@ const Photography: NextPage = () => {
     "Splitting-Lake":
       "https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/IMG_1507.JPG",
   };
-
-  const [showAnimation, setShowAnimation] = useState(false);
-  const [currentLoadedImgCnt, setCurrentImgLoadCnt] = useState<string[]>([]);
-
-  const handleLoad = async (img: string) => {
-    console.log(`Current`);
-    console.log(currentLoadedImgCnt);
-    const temp = [img, ...currentLoadedImgCnt];
-    console.log(temp);
-    setCurrentImgLoadCnt(temp);
-  };
-  useEffect(() => {
-    if (currentLoadedImgCnt.length >= Object.keys(imgURL).length - 1) {
-      setShowAnimation(true);
-      console.log("ready");
-    }
-  }, [currentLoadedImgCnt]);
 
   return (
     <div className="flex min-h-full min-w-full grow flex-col items-center justify-center">
