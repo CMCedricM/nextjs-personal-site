@@ -1,14 +1,8 @@
 import { type NextPage } from "next";
-import {
-  motion,
-  AnimatePresence,
-  domAnimation,
-  useAnimation,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { variants, images } from "../styles/animations";
 import Image from "next/image";
 import image_alt from "../images/image-holder.png";
-import { useEffect, useState } from "react";
 
 type imageType = Record<string, string>;
 
