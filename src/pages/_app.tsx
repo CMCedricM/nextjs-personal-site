@@ -5,8 +5,14 @@ import "../styles/globals.css";
 import Navigation from "../components/navigation/navigation";
 import FooterNote from "../components/footer/customFooter";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const { prefetch } = useRouter();
+  useEffect(() => {
+    prefetch("/photography");
+  }, []);
   return (
     <div className="flex min-h-screen flex-col items-center gap-5 bg-gradient-to-l from-[#4B79A1] to-[#283E51] text-lg text-white">
       <Head>
