@@ -40,23 +40,6 @@ const Photography: NextPage = () => {
       "https://filedn.com/lzwabVT0BiwB0zLQ0LYrokb/Photos/IMG_1507.JPG",
   };
 
-  const [showAnimation, setShowAnimation] = useState(false);
-  const [currentLoadedImgCnt, setCurrentImgLoadCnt] = useState<string[]>([]);
-
-  const handleLoad = async (img: string) => {
-    console.log(`Current`);
-    console.log(currentLoadedImgCnt);
-    const temp = [img, ...currentLoadedImgCnt];
-    console.log(temp);
-    setCurrentImgLoadCnt(temp);
-  };
-  useEffect(() => {
-    if (currentLoadedImgCnt.length >= Object.keys(imgURL).length - 1) {
-      setShowAnimation(true);
-      console.log("ready");
-    }
-  }, [currentLoadedImgCnt]);
-
   return (
     <div className="flex min-h-full min-w-full grow flex-col items-center justify-center">
       {
