@@ -1,6 +1,4 @@
 import { type NextPage } from "next";
-import Image from "next/image";
-import image_holder from "../images/image-holder.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { variants, images } from "../styles/animations";
 
@@ -39,32 +37,31 @@ const Photography: NextPage = () => {
   return (
     <div className="flex min-h-full min-w-full grow flex-col items-center justify-center">
       <AnimatePresence>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-          className=" relative grid grow grid-rows-1 items-center justify-center gap-5 p-5 md:grid-cols-4"
-        >
-          {Object.keys(imgURL)?.map((data: string, index) => {
-            return (
-              <motion.li
-                key={index}
-                className="flex grow flex-col"
-                variants={images}
-              >
-                <Image
-                  src={imgURL[data] || image_holder}
-                  alt=""
-                  width={300}
-                  height={225}
-                  placeholder="blur"
-                  blurDataURL="/images/image-holder.png"
-                  className="rounded-md transition duration-150  ease-in-out hover:-translate-y-1 hover:scale-110 hover:border-2 hover:border-orange-400"
-                ></Image>
-              </motion.li>
-            );
-          })}
-        </motion.div>
+        {
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            className=" relative grid grow grid-rows-1 items-center justify-center gap-5 p-5 md:grid-cols-4"
+          >
+            {Object.keys(imgURL)?.map((data: string, index) => {
+              return (
+                <motion.li
+                  key={index}
+                  className="flex grow flex-col"
+                  variants={images}
+                >
+                  <motion.img
+                    src={imgURL[data]}
+                    width={300}
+                    height={225}
+                    className="rounded-md transition duration-150  ease-in-out hover:-translate-y-1 hover:scale-110 hover:border-2 hover:border-orange-400"
+                  ></motion.img>
+                </motion.li>
+              );
+            })}
+          </motion.div>
+        }
       </AnimatePresence>
     </div>
   );
