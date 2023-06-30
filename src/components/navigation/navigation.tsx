@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import path from "path";
-
+import { motion } from "framer-motion";
+import { variants, menuBar } from "../../styles/animations";
 const Navigation = () => {
   const pages: Record<string, string> = {
     Home: "/",
@@ -14,11 +15,20 @@ const Navigation = () => {
   console.log(pathname);
 
   return (
-    <div className="p-lg p-white mt-2 flex flex-col items-center rounded-xl border-2 p-3">
-      <ul className="flex flex-row items-center gap-4">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      className="p-lg p-white mt-2 flex flex-col items-center rounded-xl border-2 p-3"
+    >
+      <ul className="flex h-full w-full flex-row gap-3">
         {Object.keys(pages).map((data, index) => {
           return (
-            <ul key={index} className="flex flex-row items-center gap-4">
+            <motion.ul
+              variants={menuBar}
+              key={index}
+              className="flex flex-row items-center gap-4"
+            >
               <li className="transition duration-150  hover:scale-110 ">
                 <Link
                   href={pages[data] || ""}
@@ -34,11 +44,11 @@ const Navigation = () => {
                   {data}
                 </Link>
               </li>
-            </ul>
+            </motion.ul>
           );
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 
