@@ -3,12 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const FooterNote = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-      className=" flex min-w-full grow flex-row items-center gap-5 rounded-md bg-[#020c14] p-5 text-white md:flex-col "
-    >
+    <div className=" flex min-w-full grow flex-row items-center gap-5 rounded-md bg-[#020c14] p-5 text-white md:flex-col ">
       <div className="flex min-w-full flex-col items-center gap-4 p-4">
         <div>
           <text className="text-center text-2xl">Contact</text>
@@ -56,7 +51,7 @@ const FooterNote = () => {
           </li>
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
