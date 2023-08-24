@@ -1,0 +1,12 @@
+.page-transition {
+    animation: pageSlide 1s ease-in-out;
+  }
+  
+  @keyframes pageSlide {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }

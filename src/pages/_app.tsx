@@ -1,6 +1,7 @@
 import { type AppType } from "next/dist/shared/lib/utils";
 
 import "../styles/globals.css";
+import "../styles/animation.css";
 
 import Navigation from "../components/navigation/navigation";
 import FooterNote from "../components/footer/customFooter";
@@ -9,10 +10,28 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  const { prefetch } = useRouter();
+  const { prefetch, events } = useRouter();
   useEffect(() => {
     prefetch("/photography");
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // Add animation class to body element when a route change occurs
+      document.body.classList.add("page-transition");
+      // Remove animation class after animation completes
+      setTimeout(() => {
+        document.body.classList.remove("page-transition");
+      }, 1000); // Adjust the timeout to match your animation duration
+    };
+
+    events.on("routeChangeStart", handleRouteChange);
+
+    return () => {
+      events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col items-center gap-5 bg-gradient-to-l from-[#4B79A1] to-[#283E51] text-lg text-white">
       <Head>
