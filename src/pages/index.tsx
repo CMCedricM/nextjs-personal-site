@@ -52,10 +52,7 @@ const Home: NextPage = () => {
                 </Link>
               }
               , the company behind the real estate site
-              <Link href="https://www.decentrepx.com" className="p-orange-300">
-                {" "}
-                DecentrePX.
-              </Link>
+              <Link href="https://www.nexusmls.io"> NexusMLS.</Link>
               {` My web tech stack includes HTML, CSS, Node.js, Next.js, React.js, and Typescript. 
           Alongside these I also have a great understanding
           of C++, Python, and noSQL.`}
